@@ -169,7 +169,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2339681222979509833, guid: 0e1bc784a94819f43bb00ffe8b97d431, type: 3}
       propertyPath: fireRate
-      value: 0.5
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9105596438562885897, guid: 0e1bc784a94819f43bb00ffe8b97d431, type: 3}
       propertyPath: m_Name
@@ -565,7 +565,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 5
+  orthographic size: 7.94
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
