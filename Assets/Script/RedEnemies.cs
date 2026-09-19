@@ -4,13 +4,31 @@ public class RedEnemies : MonoBehaviour
 {
     public float maxHealth = 15f;
     private float currentHealth;
+    public float moveSpeed = 3f;   
+    private Transform player;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         currentHealth = maxHealth;
+        player = GameObject.FindGameObjectWithTag("Player").transform;
+    }
+    void Update()
+    {
+        MoveTowardPlayer();
+    }
+    void MoveTowardPlayer()
+    {
+        if (player == null) return;
+
+        
+        Vector3 direction = (player.position - transform.position).normalized;
+
+        
+        transform.position += direction * moveSpeed * Time.deltaTime;
     }
 
-  public void TakeDamage(float amount)
+    public void TakeDamage(float amount)
     {
         currentHealth -= amount;
 
