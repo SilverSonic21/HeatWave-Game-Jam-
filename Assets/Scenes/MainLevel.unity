@@ -763,11 +763,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1277817038446256641, guid: 0e1bc784a94819f43bb00ffe8b97d431, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.59
+      value: 0.02
       objectReference: {fileID: 0}
     - target: {fileID: 1277817038446256641, guid: 0e1bc784a94819f43bb00ffe8b97d431, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.08
+      value: -0.02
       objectReference: {fileID: 0}
     - target: {fileID: 1277817038446256641, guid: 0e1bc784a94819f43bb00ffe8b97d431, type: 3}
       propertyPath: m_LocalPosition.z
@@ -775,7 +775,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1277817038446256641, guid: 0e1bc784a94819f43bb00ffe8b97d431, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.9998548
+      value: 0.7071068
       objectReference: {fileID: 0}
     - target: {fileID: 1277817038446256641, guid: 0e1bc784a94819f43bb00ffe8b97d431, type: 3}
       propertyPath: m_LocalRotation.x
@@ -787,7 +787,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1277817038446256641, guid: 0e1bc784a94819f43bb00ffe8b97d431, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.017042335
+      value: 0.7071068
       objectReference: {fileID: 0}
     - target: {fileID: 1277817038446256641, guid: 0e1bc784a94819f43bb00ffe8b97d431, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -799,7 +799,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1277817038446256641, guid: 0e1bc784a94819f43bb00ffe8b97d431, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 1.953
+      value: 90
       objectReference: {fileID: 0}
     - target: {fileID: 1933478610718494919, guid: 0e1bc784a94819f43bb00ffe8b97d431, type: 3}
       propertyPath: m_SortingLayer
@@ -811,7 +811,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2339681222979509833, guid: 0e1bc784a94819f43bb00ffe8b97d431, type: 3}
       propertyPath: turnSpeed
-      value: 50
+      value: 60
       objectReference: {fileID: 0}
     - target: {fileID: 9105596438562885897, guid: 0e1bc784a94819f43bb00ffe8b97d431, type: 3}
       propertyPath: m_Name

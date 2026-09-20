@@ -7,6 +7,10 @@ public class RedEnemies : MonoBehaviour
     public float moveSpeed = 3f;   
     private Transform player;
 
+    //Things i've added to the enemies (Ethan)
+    public int wallet = 5;
+    public PlayerControls Player;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -42,7 +46,7 @@ public class RedEnemies : MonoBehaviour
 
     void Die()
     {
-        
+        Player.gold += wallet;
         Destroy(gameObject);
         
     }

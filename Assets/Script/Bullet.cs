@@ -13,6 +13,8 @@ public class Bullet : MonoBehaviour
     public AudioSource audioSource;
     public AudioClip breakSound;
 
+    
+
     void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -60,6 +62,7 @@ public class Bullet : MonoBehaviour
 
         
             Destroy(gameObject);
+            
         } 
         //Debug.Log("Hit");
         
