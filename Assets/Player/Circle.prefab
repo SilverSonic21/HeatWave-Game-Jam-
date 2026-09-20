@@ -42,6 +42,7 @@ GameObject:
   - component: {fileID: 1277817038446256641}
   - component: {fileID: 1933478610718494919}
   - component: {fileID: 2339681222979509833}
+  - component: {fileID: 8512058823864926959}
   m_Layer: 0
   m_Name: Circle
   m_TagString: Player
@@ -111,10 +112,10 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: -1243057255
-  m_SortingLayer: 3
+  m_SortingLayer: 4
   m_SortingOrder: 0
   m_MaskInteraction: 0
-  m_Sprite: {fileID: 713504058421673091, guid: 987ef6d84a83d8c4eb8aabdf0f2eb8a1, type: 3}
+  m_Sprite: {fileID: 433470679331895903, guid: 987ef6d84a83d8c4eb8aabdf0f2eb8a1, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -138,9 +139,31 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerControls
   turnSpeed: 60
-  animation: {fileID: 0}
+  animation: {fileID: 8512058823864926959}
   bulletPrefab: {fileID: 2969216054631004769, guid: 8d7f3d27325df534a8ddbd938ec92d66, type: 3}
   firingPoint: {fileID: 2345430757699427478}
   fireRate: 0
   upgrade: {fileID: 0}
-  gold: 0
+  gold: 635
+--- !u!95 &8512058823864926959
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9105596438562885897}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: be1faaaad82239b40b2e23df2454fc38, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0

@@ -399,13 +399,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 431744510}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: 0.000308037, w: 1}
-  m_LocalPosition: {x: 0.52, y: -2.82, z: 0.72}
-  m_LocalScale: {x: 0.51657283, y: 0.31430656, z: 0.38688168}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.5338674, y: -2.802676, z: 0.72}
+  m_LocalScale: {x: 0.509244, y: 0.3084777, z: 0.38688168}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 691645195}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0.035}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &431744513
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -954,7 +954,7 @@ Transform:
   m_GameObject: {fileID: 723629170}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: 1, w: 0}
-  m_LocalPosition: {x: 0.428, y: 4.06, z: 0.72}
+  m_LocalPosition: {x: 0.53386855, y: 4.060139, z: 0.72}
   m_LocalScale: {x: 0.509244, y: 0.3084777, z: 0.38688168}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1239,13 +1239,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 829953925}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0.70347154, w: 0.71072346}
-  m_LocalPosition: {x: -3.42, y: 0.62, z: 0.72}
+  m_LocalRotation: {x: 0, y: 0, z: -0.7071068, w: 0.7071068}
+  m_LocalPosition: {x: -3.2922635, y: 0.62873167, z: 0.72}
   m_LocalScale: {x: 0.31339693, y: 0.3868817, z: 0.38688168}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 691645195}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -89.412}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -90}
 --- !u!61 &829953928
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1432,15 +1432,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1277817038446256641, guid: 0e1bc784a94819f43bb00ffe8b97d431, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.019999955
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1277817038446256641, guid: 0e1bc784a94819f43bb00ffe8b97d431, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.019999996
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1277817038446256641, guid: 0e1bc784a94819f43bb00ffe8b97d431, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -1.25
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1277817038446256641, guid: 0e1bc784a94819f43bb00ffe8b97d431, type: 3}
       propertyPath: m_LocalRotation.w
@@ -1470,22 +1470,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 152.631
       objectReference: {fileID: 0}
-    - target: {fileID: 1933478610718494919, guid: 0e1bc784a94819f43bb00ffe8b97d431, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 433470679331895903, guid: 987ef6d84a83d8c4eb8aabdf0f2eb8a1, type: 3}
     - target: {fileID: 2339681222979509833, guid: 0e1bc784a94819f43bb00ffe8b97d431, type: 3}
       propertyPath: upgrade
       value: 
       objectReference: {fileID: 1418641996}
-    - target: {fileID: 2339681222979509833, guid: 0e1bc784a94819f43bb00ffe8b97d431, type: 3}
-      propertyPath: fireRate
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 2339681222979509833, guid: 0e1bc784a94819f43bb00ffe8b97d431, type: 3}
-      propertyPath: animation
-      value: 
-      objectReference: {fileID: 1056844503}
     - target: {fileID: 9105596438562885897, guid: 0e1bc784a94819f43bb00ffe8b97d431, type: 3}
       propertyPath: m_Name
       value: Player
@@ -1493,44 +1481,14 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 9105596438562885897, guid: 0e1bc784a94819f43bb00ffe8b97d431, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1056844503}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0e1bc784a94819f43bb00ffe8b97d431, type: 3}
---- !u!1 &1056844502 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 9105596438562885897, guid: 0e1bc784a94819f43bb00ffe8b97d431, type: 3}
-  m_PrefabInstance: {fileID: 1056844501}
-  m_PrefabAsset: {fileID: 0}
---- !u!95 &1056844503
-Animator:
-  serializedVersion: 7
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1056844502}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: be1faaaad82239b40b2e23df2454fc38, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_AnimatePhysics: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
 --- !u!114 &1056844504 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2339681222979509833, guid: 0e1bc784a94819f43bb00ffe8b97d431, type: 3}
   m_PrefabInstance: {fileID: 1056844501}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1056844502}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f4a5c6c8e88965c4a8e9147e9e392081, type: 3}
@@ -2068,13 +2026,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1215481728}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: 0.7105069, w: 0.70369023}
+  m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
   m_LocalPosition: {x: 4.36, y: 0.61, z: 0.72}
   m_LocalScale: {x: 0.31547588, y: 0.38688168, z: 0.38688168}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 691645195}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90.552}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
 --- !u!61 &1215481731
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2167,7 +2125,7 @@ MonoBehaviour:
   Player: {fileID: 1056844504}
   Enemies: {fileID: 4155127485508715864, guid: bd58fda743ce74847b7baab5e9faae23, type: 3}
   multishot: 0
-  piercing: 0
+  piercing: 1
   cost: 1
   dmgUP: 2
   turnUP: 5

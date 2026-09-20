@@ -1,3 +1,4 @@
+using System.Threading;
 using UnityEngine;
 
 public class Bullet : MonoBehaviour
@@ -13,7 +14,10 @@ public class Bullet : MonoBehaviour
     public AudioSource audioSource;
     public AudioClip breakSound;
 
+
+    public Upgrades upgrade;
     
+
 
     void Awake()
     {
@@ -68,8 +72,22 @@ public class Bullet : MonoBehaviour
             //p1.GetComponent<ParticleSystem>().Play();
             //p2.GetComponent<ParticleSystem>().Play();
 
-        
-           
+            bool destroyed = false;
+            int count = 0;
+            while(destroyed == false)
+            {
+                if(count < 1 && upgrade.piercing)
+                {
+                  count += 1;
+                  continue;
+                }
+                else
+                {
+                  destroyed = true;
+                  Destroy(gameObject);
+                }
+                
+            }
             
         } 
         //Debug.Log("Hit");
