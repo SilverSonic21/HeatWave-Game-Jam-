@@ -51,9 +51,9 @@ public class Bullet : MonoBehaviour
                 enemy.TakeDamage(damage);
             }
         
-            
+             Destroy(gameObject);
 
-            
+        
             //GameObject p1 = Instantiate(particles, transform.position, Quaternion.identity);
             //GameObject p2 = Instantiate(particles2, transform.position, Quaternion.identity);
 
@@ -61,7 +61,7 @@ public class Bullet : MonoBehaviour
             //p2.GetComponent<ParticleSystem>().Play();
 
         
-            Destroy(gameObject);
+           
             
         } 
         //Debug.Log("Hit");
