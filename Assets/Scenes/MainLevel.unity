@@ -1147,6 +1147,14 @@ PrefabInstance:
       value: 1.3606
       objectReference: {fileID: 0}
     - target: {fileID: 3716345155344053889, guid: 4f8d3e3fcfc9b9a43bd2427f11e3f0dc, type: 3}
+      propertyPath: spawnRadius
+      value: 40
+      objectReference: {fileID: 0}
+    - target: {fileID: 3716345155344053889, guid: 4f8d3e3fcfc9b9a43bd2427f11e3f0dc, type: 3}
+      propertyPath: timeBetweenWaves
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 3716345155344053889, guid: 4f8d3e3fcfc9b9a43bd2427f11e3f0dc, type: 3}
       propertyPath: waves.Array.size
       value: 5
       objectReference: {fileID: 0}
