@@ -110,8 +110,8 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -1243057255
+  m_SortingLayer: 3
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_Sprite: {fileID: 713504058421673091, guid: 987ef6d84a83d8c4eb8aabdf0f2eb8a1, type: 3}
@@ -137,8 +137,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4a5c6c8e88965c4a8e9147e9e392081, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerControls
-  turnSpeed: 100
+  turnSpeed: 60
   animation: {fileID: 0}
   bulletPrefab: {fileID: 2969216054631004769, guid: 8d7f3d27325df534a8ddbd938ec92d66, type: 3}
   firingPoint: {fileID: 2345430757699427478}
   fireRate: 0
+  upgrade: {fileID: 0}
+  gold: 0

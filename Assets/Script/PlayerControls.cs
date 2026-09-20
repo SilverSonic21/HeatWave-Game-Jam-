@@ -55,11 +55,11 @@ public class PlayerControls : MonoBehaviour
             Shoot();
             nextFire = Time.time + fireRate;
 
-            //animation.SetBool("Throw", true);
+            animation.SetBool("Fire", true);
         }
         else
         {
-            //animation.SetBool("Throw", false);
+            animation.SetBool("Fire", false);
         }
     }
 
