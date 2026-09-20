@@ -16,6 +16,7 @@ public class RedEnemies : MonoBehaviour
     {
         currentHealth = maxHealth;
         player = GameObject.FindGameObjectWithTag("Player").transform;
+        
     }
     void Update()
     {
@@ -30,6 +31,17 @@ public class RedEnemies : MonoBehaviour
 
         
         transform.position += direction * moveSpeed * Time.deltaTime;
+    }
+
+        private void OnTriggerEnter2D(Collider2D collision)
+    {
+        WallDamage wall = collision.GetComponent<WallDamage>();
+
+        if (wall != null)
+        {
+            wall.TakeDamage(5f);
+            Die();
+        }
     }
 
     public void TakeDamage(float amount)

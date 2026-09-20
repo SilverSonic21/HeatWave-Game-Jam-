@@ -17,7 +17,7 @@ public class ButtonUI : MonoBehaviour
 
     public void Play()
     {
-        SceneManager.LoadSceneAsync("Test_Scene");
+        SceneManager.LoadSceneAsync("MainLevel");
         Time.timeScale = 1f;
     }
 
