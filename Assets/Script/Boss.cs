@@ -1,41 +1,51 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-public class RedEnemies : MonoBehaviour
+public class Boss : MonoBehaviour
 {
-    public float maxHealth = 15f;
+public float maxHealth = 15f;
     public float damage = 5f;
     private float currentHealth;
-    public float moveSpeed = 3f;  
+    public float moveSpeed = 3f; 
+    public Slider healthBar;  
     private Transform player;
 
-    //Things i've added to the enemies (Ethan)
     public int wallet = 5;
     public PlayerControls Player;
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         currentHealth = maxHealth;
+
+        if (healthBar != null)
+        {
+            healthBar.maxValue = maxHealth;
+            healthBar.value = maxHealth;
+        }
+
         player = GameObject.FindGameObjectWithTag("Player").transform;
-        
     }
+
     void Update()
     {
         MoveTowardPlayer();
+
+        // Make the health bar face the camera (optional but looks good)
+        if (healthBar != null)
+        {
+            healthBar.transform.rotation = Quaternion.identity;
+        }
     }
+
     void MoveTowardPlayer()
     {
         if (player == null) return;
 
-        
         Vector3 direction = (player.position - transform.position).normalized;
-
-        
         transform.position += direction * moveSpeed * Time.deltaTime;
     }
 
-        private void OnTriggerEnter2D(Collider2D collision)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
         WallDamage wall = collision.GetComponent<WallDamage>();
 
@@ -50,11 +60,14 @@ public class RedEnemies : MonoBehaviour
     {
         currentHealth -= amount;
 
+        if (healthBar != null)
+        {
+            healthBar.value = currentHealth;
+        }
+
         if (currentHealth <= 0)
         {
-            Debug.Log("Died");
             Die();
-            
         }
     }
 
@@ -62,6 +75,5 @@ public class RedEnemies : MonoBehaviour
     {
         Player.gold += wallet;
         Destroy(gameObject);
-        
     }
 }
