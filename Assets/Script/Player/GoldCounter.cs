@@ -5,6 +5,7 @@ public class GoldCounter : MonoBehaviour
 {
     public PlayerControls player;
     public TextMeshProUGUI goldText; 
+  
     void Start()
     {
         

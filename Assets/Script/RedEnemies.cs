@@ -44,7 +44,17 @@ public class RedEnemies : MonoBehaviour
             wall.TakeDamage(damage);
             Die();
         }
+
+        PlayerControls player = collision.GetComponent<PlayerControls>();
+
+        if (player != null)
+        {
+            player.TakeDamage(damage);
+            Die(); 
+        }
     }
+
+    
 
     public void TakeDamage(float amount)
     {
