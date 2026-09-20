@@ -45,7 +45,7 @@ public class RedEnemies : MonoBehaviour
             Die();
         }
 
-        PlayerControls player = collision.GetComponent<PlayerControls>();
+        PlayerControls player = collision.GetComponentInParent<PlayerControls>();
 
         if (player != null)
         {

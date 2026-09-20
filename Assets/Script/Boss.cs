@@ -33,7 +33,8 @@ public float maxHealth = 15f;
         // Make the health bar face the camera (optional but looks good)
         if (healthBar != null)
         {
-healthBar.transform.rotation = Camera.main.transform.rotation;        }
+        healthBar.transform.rotation = Camera.main.transform.rotation;       
+        }
     }
 
     void MoveTowardPlayer()
@@ -52,6 +53,13 @@ healthBar.transform.rotation = Camera.main.transform.rotation;        }
         {
             wall.TakeDamage(damage);
             Die();
+        }
+
+        PlayerControls player = collision.GetComponentInParent<PlayerControls>();
+        if (player != null)
+        {
+            player.TakeDamage(damage);
+            Die(); 
         }
     }
 
