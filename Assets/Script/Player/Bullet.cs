@@ -42,20 +42,24 @@ public class Bullet : MonoBehaviour
         if (hasHit) return;
         if (collision.gameObject.CompareTag("Enemy"))
         {
-            hasHit = true;
+            
 
             RedEnemies enemy = collision.gameObject.GetComponent<RedEnemies>();
             if (enemy != null)
             {
+                hasHit = true;
                 enemy.TakeDamage(damage);
+                Destroy(gameObject);
             }
             Boss boss = collision.GetComponent<Boss>();
             if (boss != null)
             {
+                hasHit = true;
                 boss.TakeDamage(damage);
+                Destroy(gameObject);
             }
         
-             Destroy(gameObject);
+          
 
         
             //GameObject p1 = Instantiate(particles, transform.position, Quaternion.identity);

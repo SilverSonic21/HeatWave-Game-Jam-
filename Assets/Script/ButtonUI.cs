@@ -6,13 +6,14 @@ public class ButtonUI : MonoBehaviour
     public GameObject credits;
     public void OnPlayAgainButtonClicked()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         Time.timeScale = 1f;
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        
     }
 
     public void OnMainMenuButton()
     {
-    SceneManager.LoadSceneAsync("MainMenu");    
+    SceneManager.LoadSceneAsync("TitleScreen");    
     }
 
     public void Play()

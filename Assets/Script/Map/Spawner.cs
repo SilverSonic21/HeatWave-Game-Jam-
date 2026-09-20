@@ -44,6 +44,9 @@ public class Spawner : MonoBehaviour
 
     void Start()
     {
+        enemiesAlive = 0;
+        allWavesSpawned = false;
+        currentWaveIndex = 0;
         if (winScreen != null){
             winScreen.SetActive(false);
         }
@@ -62,7 +65,7 @@ public class Spawner : MonoBehaviour
             StartCoroutine(ShowWaveAnnouncement("Wave " + (currentWaveIndex + 1) + ": " + currentWave.waveName));
 
             // Wait before spawning
-            yield return new WaitForSeconds(timeBetweenWaves);
+            yield return new WaitForSecondsRealtime(timeBetweenWaves);
 
             Debug.Log("Starting Wave " + (currentWaveIndex + 1) + ": " + currentWave.waveName);
 
@@ -93,7 +96,7 @@ public class Spawner : MonoBehaviour
         foreach (var enemy in spawnQueue)
         {
             SpawnEnemy(enemy);
-            yield return new WaitForSeconds(enemy.interval);
+            yield return new WaitForSecondsRealtime(enemy.interval);
         }
     }
 
@@ -135,11 +138,14 @@ public class Spawner : MonoBehaviour
         Debug.Log("YOU WIN!");
 
         if (winScreen != null)
-        {
+        { 
             winScreen.SetActive(true);
+            Time.timeScale = 0f;
+            
         }
+        Time.timeScale = 1;
 
-        Time.timeScale = 0f;
+       
     }
 
     Vector3 GetRandomSpawnPosition()
@@ -178,7 +184,7 @@ public class Spawner : MonoBehaviour
         float t = 0f;
         while (t < fadeDuration)
         {
-            t += Time.deltaTime;
+            t += Time.unscaledDeltaTime;
             float alpha = Mathf.Lerp(0f, 1f, t / fadeDuration);
             c.a = alpha;
             waveAnnouncementText.color = c;
@@ -186,7 +192,7 @@ public class Spawner : MonoBehaviour
         }
 
         // Stay visible
-        yield return new WaitForSeconds(stayDuration);
+        yield return new WaitForSecondsRealtime(stayDuration);
 
         // Fade out
         t = 0f;
