@@ -44,11 +44,15 @@ public class Bullet : MonoBehaviour
         {
             hasHit = true;
 
-           //AudioSource.PlayClipAtPoint(breakSound, transform.position);
             RedEnemies enemy = collision.gameObject.GetComponent<RedEnemies>();
             if (enemy != null)
             {
                 enemy.TakeDamage(damage);
+            }
+            Boss boss = collision.GetComponent<Boss>();
+            if (boss != null)
+            {
+                boss.TakeDamage(damage);
             }
         
              Destroy(gameObject);
