@@ -107,7 +107,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 90f3e568a71cb874b807cd2f7256ef22, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::RedEnemies
-  maxHealth: 10
+  maxHealth: 30
   damage: 15
   moveSpeed: 3
   wallet: 5

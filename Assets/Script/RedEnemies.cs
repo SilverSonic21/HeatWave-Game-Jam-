@@ -7,6 +7,7 @@ public class RedEnemies : MonoBehaviour
     public float damage = 5f;
     private float currentHealth;
     public float moveSpeed = 3f;  
+    public Slider healthBarE;
     private Transform player;
 
     //Things i've added to the enemies (Ethan)
@@ -18,21 +19,33 @@ public class RedEnemies : MonoBehaviour
     {
         currentHealth = maxHealth;
         player = GameObject.FindGameObjectWithTag("Player").transform;
-        
+        if (healthBarE != null)
+        {
+            healthBarE.maxValue = maxHealth;
+            healthBarE.value = maxHealth;
+        }
     }
     void Update()
     {
         MoveTowardPlayer();
+        LookAtPlayer();
+        if (healthBarE != null)
+        {
+        healthBarE.transform.rotation = Camera.main.transform.rotation;       
+        }
     }
     void MoveTowardPlayer()
     {
         if (player == null) return;
 
-        
         Vector3 direction = (player.position - transform.position).normalized;
 
         
         transform.position += direction * moveSpeed * Time.deltaTime;
+    }
+    void LookAtPlayer()
+    {
+        
     }
 
         private void OnTriggerEnter2D(Collider2D collision)
@@ -45,7 +58,7 @@ public class RedEnemies : MonoBehaviour
             Die();
         }
 
-        PlayerControls player = collision.GetComponentInParent<PlayerControls>();
+        PlayerControls player = collision.GetComponent<PlayerControls>();
 
         if (player != null)
         {
@@ -60,12 +73,19 @@ public class RedEnemies : MonoBehaviour
     {
         currentHealth -= amount;
 
+         if (healthBarE != null)
+        {
+            healthBarE.value = currentHealth;
+        }
+
         if (currentHealth <= 0)
         {
             Debug.Log("Died");
             Die();
             
         }
+     
+
     }
 
     void Die()

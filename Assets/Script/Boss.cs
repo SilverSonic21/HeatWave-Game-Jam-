@@ -29,6 +29,7 @@ public float maxHealth = 15f;
     void Update()
     {
         MoveTowardPlayer();
+        LookAtPlayer();
 
         // Make the health bar face the camera (optional but looks good)
         if (healthBar != null)
@@ -43,6 +44,10 @@ public float maxHealth = 15f;
 
         Vector3 direction = (player.position - transform.position).normalized;
         transform.position += direction * moveSpeed * Time.deltaTime;
+    }
+    void LookAtPlayer()
+    {
+        
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
